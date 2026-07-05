@@ -4,7 +4,7 @@ import "./styles.css";
 
 const API_KEY = import.meta.env.VITE_YOUTUBE_API_KEY;
 const API_BASE = "https://www.googleapis.com/youtube/v3";
-const DEFAULT_QUERY = "nhạc remix mới nhất";
+const DEFAULT_QUERY = "alan walker list song";
 const RECENT_DAYS = 120;
 const REMIX_TERMS = [
   "remix",
@@ -278,9 +278,8 @@ function App() {
             {!loading &&
               videos.map((video) => (
                 <button
-                  className={`video-item ${
-                    selectedVideo?.id === video.id ? "is-active" : ""
-                  }`}
+                  className={`video-item ${selectedVideo?.id === video.id ? "is-active" : ""
+                    }`}
                   key={video.id}
                   type="button"
                   onClick={() => setSelectedVideo(video)}
